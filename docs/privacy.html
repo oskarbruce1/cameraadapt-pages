@@ -35,7 +35,8 @@
   main { max-width: 680px; margin: 0 auto; }
   h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.02em; }
   h2 { font-size: 20px; margin: 34px 0 10px; letter-spacing: -0.01em; }
-  .updated { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+  .updated { color: var(--muted); font-size: 15px; margin: 0 0 8px; }
+  .operator { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
   p, li { color: var(--ink); }
   ul { padding-left: 22px; }
   li { margin: 6px 0; }
@@ -48,6 +49,19 @@
     margin: 20px 0;
   }
   .card p { margin: 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 16px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th { font-weight: 600; }
   hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0 20px; }
   footer { color: var(--muted); font-size: 15px; }
 </style>
@@ -56,6 +70,7 @@
 <main>
   <h1>Privacy Policy</h1>
   <p class="updated">CameraAdapt · Last updated 1 September 2026</p>
+  <p class="operator">CameraAdapt is operated by Oskar Bruce, United Kingdom.</p>
 
   <p>CameraAdapt helps you recreate a photograph's look on your own camera and lens. This policy explains what the app does with your data. In short: the app has no accounts, collects no analytics, and keeps your library on your device.</p>
 
@@ -82,35 +97,83 @@
   </ul>
   <p>If you never upload a photo, no image ever leaves your iPhone.</p>
 
+  <h2>Revoking your consent</h2>
+  <p>Photo analysis is entirely optional, and you can withdraw your consent at any time: open the <strong>Profile</strong> tab and turn off <strong>"Analyse my own photos"</strong>. The upload feature is then hidden throughout the app and no image will be sent anywhere. The twenty bundled reference looks continue to work, because they are adapted to your gear entirely on your device. You can turn the setting back on whenever you like.</p>
+
   <h2>Technical information we receive</h2>
   <p>When you use photo analysis, our service receives a randomly generated device identifier (Apple's "identifier for vendor") so we can apply fair-use limits and prevent abuse. It is not linked to your name, email or Apple ID, and it changes if you delete and reinstall the app.</p>
+
+  <h2>How long data is kept</h2>
+  <table>
+    <tr>
+      <th>Data</th>
+      <th>Retention</th>
+    </tr>
+    <tr>
+      <td>Uploaded photo</td>
+      <td>Held only for the duration of the request, then discarded. Never written to storage.</td>
+    </tr>
+    <tr>
+      <td>Rate-limiting device identifier</td>
+      <td>Held in server memory only, with the daily request count reset every day. It is not written to any database and is lost whenever the service restarts.</td>
+    </tr>
+    <tr>
+      <td>Saved looks, thumbnails, gear and preferences</td>
+      <td>Stored on your iPhone and kept until you delete them in the app or delete the app itself.</td>
+    </tr>
+    <tr>
+      <td>Subscription status</td>
+      <td>Held by our subscription provider for as long as the subscription record exists.</td>
+    </tr>
+  </table>
 
   <h2>Subscriptions</h2>
   <p>Purchases are processed by Apple and managed through RevenueCat, our subscription provider. We receive your subscription status and an anonymous purchase identifier. We never receive your payment card details — those stay with Apple.</p>
 
+  <h2>Third parties who process data for us</h2>
+  <p>We use three service providers, and no others:</p>
+  <ul>
+    <li><strong>Anthropic</strong> — analyses an uploaded reference photo and returns a description of it.</li>
+    <li><strong>RevenueCat</strong> — manages subscription status.</li>
+    <li><strong>Apple</strong> — processes payments and delivers the app.</li>
+  </ul>
+  <p>Each of these providers is contractually required, under the agreements and terms that govern our use of their services, to protect your data to a standard at least equivalent to the one described in this policy, to process it only for the purposes set out above and on our instructions, and not to use it for their own unrelated purposes. We do not share your data with anyone else.</p>
+
   <h2>Photo library access</h2>
   <p>The app uses Apple's system photo picker. We only ever receive the specific image you choose; the app cannot browse your photo library.</p>
+
+  <h2>Your rights (UK and EU)</h2>
+  <p>If you are in the United Kingdom or the European Economic Area, data protection law gives you the following rights over your personal data:</p>
+  <ul>
+    <li><strong>Access</strong> — ask what personal data we hold about you.</li>
+    <li><strong>Correction</strong> — ask us to correct data that is inaccurate or incomplete.</li>
+    <li><strong>Deletion</strong> — ask us to erase your data.</li>
+    <li><strong>Portability</strong> — receive your data in a common, machine-readable format.</li>
+    <li><strong>Objection and restriction</strong> — object to, or ask us to limit, our processing.</li>
+    <li><strong>Withdrawing consent</strong> — turn off photo analysis at any time, as described above.</li>
+  </ul>
+  <p>To exercise any of these rights, email <a href="mailto:contactforbruce@gmail.com">contactforbruce@gmail.com</a> and we will respond within one month. Because the app has no accounts, most of your data never reaches us and lives only on your iPhone, where you can view and delete it directly. You also have the right to complain to the UK Information Commissioner's Office (<a href="https://ico.org.uk">ico.org.uk</a>) or your local supervisory authority.</p>
 
   <h2>Children</h2>
   <p>CameraAdapt is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
 
   <h2>Your choices</h2>
   <ul>
+    <li>Turn photo analysis off in Profile at any time.</li>
     <li>Delete any saved look from within the app.</li>
     <li>Delete the app to remove all locally stored data.</li>
     <li>Manage or cancel a subscription in your Apple ID settings.</li>
-    <li>Contact us to ask any question about your data.</li>
   </ul>
 
   <h2>Changes</h2>
   <p>If this policy changes materially, we will update this page and the date above.</p>
 
   <h2>Contact</h2>
-  <p>Questions about privacy: <a href="mailto:contactforbruce@gmail.com">contactforbruce@gmail.com</a></p>
+  <p>Questions about privacy, or to exercise any right above: <a href="mailto:contactforbruce@gmail.com">contactforbruce@gmail.com</a></p>
 
   <hr>
   <footer>
-    <p>CameraAdapt · <a href="support.html">Support</a></p>
+    <p>CameraAdapt · operated by Oskar Bruce, United Kingdom · <a href="support.html">Support</a></p>
   </footer>
 </main>
 </body>
