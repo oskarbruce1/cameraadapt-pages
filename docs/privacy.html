@@ -69,7 +69,7 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="updated">CameraAdapt · Last updated 1 September 2026</p>
+  <p class="updated">CameraAdapt · Last updated 2 September 2026</p>
   <p class="operator">CameraAdapt is operated by Oskar Bruce, United Kingdom.</p>
 
   <p>CameraAdapt helps you recreate a photograph's look on your own camera and lens. This policy explains what the app does with your data. In short: the app has no accounts, collects no analytics, and keeps your library on your device.</p>
@@ -93,15 +93,15 @@
     <li>The image is used only to produce that description and is <strong>not stored</strong> on our servers after the request completes.</li>
     <li>Only the resulting description and a local thumbnail are kept, on your device.</li>
     <li>Anthropic processes the image as our service provider under their API terms and does not use it to train their models.</li>
-    <li>Photos from the bundled reference library are analysed on your device and are never uploaded.</li>
+    <li>Photos from the bundled reference library are never uploaded. When you adapt a bundled look, your camera settings are calculated on your iPhone; the app then sends a short text description of the look together with your chosen camera, lens and editing app to our service, which asks Anthropic's Claude API to write the editing recipe for that pairing. No image is sent.</li>
   </ul>
   <p>If you never upload a photo, no image ever leaves your iPhone.</p>
 
   <h2>Revoking your consent</h2>
-  <p>Photo analysis is entirely optional, and you can withdraw your consent at any time: open the <strong>Profile</strong> tab and turn off <strong>"Analyse my own photos"</strong>. The upload feature is then hidden throughout the app and no image will be sent anywhere. The twenty bundled reference looks continue to work, because they are adapted to your gear entirely on your device. You can turn the setting back on whenever you like.</p>
+  <p>Photo analysis is entirely optional, and you can withdraw your consent at any time: open the <strong>Profile</strong> tab and turn off <strong>"Analyse my own photos"</strong>. The upload feature is then hidden throughout the app and no image will be sent anywhere. The bundled reference looks continue to work: their camera settings are calculated on your device, and only the look's text description and your gear selection are sent to write the editing recipe. No image is involved. You can turn the setting back on whenever you like.</p>
 
   <h2>Technical information we receive</h2>
-  <p>When you use photo analysis, our service receives a randomly generated device identifier (Apple's "identifier for vendor") so we can apply fair-use limits and prevent abuse. It is not linked to your name, email or Apple ID, and it changes if you delete and reinstall the app.</p>
+  <p>Whenever the app contacts our service &mdash; for photo analysis or to write an editing recipe &mdash; it receives a randomly generated device identifier (Apple's "identifier for vendor") so we can apply fair-use limits and prevent abuse. It is not linked to your name, email or Apple ID, and it changes if you delete and reinstall the app.</p>
 
   <h2>How long data is kept</h2>
   <table>
@@ -115,7 +115,7 @@
     </tr>
     <tr>
       <td>Rate-limiting device identifier</td>
-      <td>Held in server memory only, with the daily request count reset every day. It is not written to any database and is lost whenever the service restarts.</td>
+      <td>Stored in our database as one row per device per day (the identifier and a request count), used only to apply the daily fair-use limit. Rows for past days are periodically deleted. The identifier is never stored alongside any look, gear or recipe data.</td>
     </tr>
     <tr>
       <td>Saved looks, thumbnails, gear and preferences</td>
@@ -133,7 +133,7 @@
   <h2>Third parties who process data for us</h2>
   <p>We use three service providers, and no others:</p>
   <ul>
-    <li><strong>Anthropic</strong> — analyses an uploaded reference photo and returns a description of it.</li>
+    <li><strong>Anthropic</strong> — analyses an uploaded reference photo and returns a description of it, and writes editing recipes from a text description of a look and your gear selection.</li>
     <li><strong>RevenueCat</strong> — manages subscription status.</li>
     <li><strong>Apple</strong> — processes payments and delivers the app.</li>
   </ul>
