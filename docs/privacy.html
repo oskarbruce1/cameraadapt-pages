@@ -69,7 +69,7 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="updated">CameraAdapt · Last updated 2 September 2026</p>
+  <p class="updated">CameraAdapt · Last updated 15 September 2026</p>
   <p class="operator">CameraAdapt is operated by Oskar Bruce, United Kingdom.</p>
 
   <p>CameraAdapt helps you recreate a photograph's look on your own camera and lens. This policy explains what the app does with your data. In short: the app has no accounts, collects no analytics, and keeps your library on your device.</p>
@@ -88,12 +88,12 @@
   <p>This information is stored locally on your iPhone. Deleting the app removes it.</p>
 
   <h2>Photos you upload</h2>
-  <p>If you choose to analyse your own reference photo, the app resizes a copy of that image and sends it to our analysis service, which forwards it to Anthropic's Claude API to describe the photograph's lighting, depth of field and colour treatment.</p>
+  <p>If you choose to analyse your own reference photo, the app resizes a copy of that image and sends it to our analysis service, which forwards it to OpenAI's API to describe the photograph's lighting, depth of field and colour treatment.</p>
   <ul>
-    <li>The image is used only to produce that description and is <strong>not stored</strong> on our servers after the request completes.</li>
+    <li>The image is used only to produce that description and is <strong>not stored by our service</strong> after the request completes. OpenAI keeps API requests, including the image, in abuse-monitoring logs for up to 30 days, unless the law requires longer, and then deletes them. We do not ask OpenAI to store anything beyond that.</li>
     <li>Only the resulting description and a local thumbnail are kept, on your device.</li>
-    <li>Anthropic processes the image as our service provider under their API terms and does not use it to train their models.</li>
-    <li>Photos from the bundled reference library are never uploaded. When you adapt a bundled look, your camera settings are calculated on your iPhone; the app then sends a short text description of the look together with your chosen camera, lens and editing app to our service, which asks Anthropic's Claude API to write the editing recipe for that pairing. No image is sent.</li>
+    <li>OpenAI processes the image as our service provider under its API terms and does not use it to train its models.</li>
+    <li>Photos from the bundled reference library are never uploaded. When you adapt a bundled look, your camera settings are calculated on your iPhone; the app then sends a short text description of the look together with your chosen camera, lens and editing app to our service, which asks OpenAI's API to write the editing recipe for that pairing. No image is sent.</li>
   </ul>
   <p>If you never upload a photo, no image ever leaves your iPhone.</p>
 
@@ -111,7 +111,11 @@
     </tr>
     <tr>
       <td>Uploaded photo</td>
-      <td>Held only for the duration of the request, then discarded. Never written to storage.</td>
+      <td>Not stored by our service beyond the request. OpenAI, which analyses it, keeps API requests in abuse-monitoring logs for up to 30 days, unless the law requires longer, then deletes them.</td>
+    </tr>
+    <tr>
+      <td>Text sent to write an edit recipe</td>
+      <td>For a bundled look, the look's text description and your camera, lens and editing app choice are sent to OpenAI, which keeps API requests in abuse-monitoring logs for up to 30 days, unless the law requires longer, then deletes them. Our service caches the resulting recipe, keyed on the look, gear and editing app only, with no device identifier, so the next person with the same pairing gets it without a new request. Recipes for photos you uploaded are never cached.</td>
     </tr>
     <tr>
       <td>Rate-limiting device identifier</td>
@@ -133,7 +137,7 @@
   <h2>Third parties who process data for us</h2>
   <p>We use three service providers, and no others:</p>
   <ul>
-    <li><strong>Anthropic</strong> — analyses an uploaded reference photo and returns a description of it, and writes editing recipes from a text description of a look and your gear selection.</li>
+    <li><strong>OpenAI</strong> — analyses an uploaded reference photo and returns a description of it, and writes editing recipes from a text description of a look and your gear selection.</li>
     <li><strong>RevenueCat</strong> — manages subscription status.</li>
     <li><strong>Apple</strong> — processes payments and delivers the app.</li>
   </ul>
